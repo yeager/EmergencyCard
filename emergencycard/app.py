@@ -246,7 +246,7 @@ class EmergencyCardApp(Adw.Application):
             box.append(Gtk.Separator())
 
         # Contacts
-        contacts_title = Gtk.Label(label=_("Kontaktpersoner"), halign=Gtk.Align.START)
+        contacts_title = Gtk.Label(label=_("Contact persons"), halign=Gtk.Align.START)
         contacts_title.add_css_class("emergency-section")
         box.append(contacts_title)
 
@@ -330,7 +330,7 @@ class EmergencyCardApp(Adw.Application):
         # Contacts section
         box.append(Gtk.Separator())
         contacts_header = Gtk.Box(spacing=8)
-        contacts_title = Gtk.Label(label=_("Kontaktpersoner"), halign=Gtk.Align.START, hexpand=True)
+        contacts_title = Gtk.Label(label=_("Contact persons"), halign=Gtk.Align.START, hexpand=True)
         contacts_title.add_css_class("emergency-section")
         contacts_header.append(contacts_title)
         add_btn = Gtk.Button(label="+ Lagg till")

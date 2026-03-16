@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: emergencycard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 19:25+0100\n"
+"POT-Creation-Date: 2026-03-16 19:59+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,7 @@ msgid "(ej ifyllt)"
 msgstr ""
 
 #: emergencycard/app.py:249 emergencycard/app.py:333
-msgid "Kontaktpersoner"
+msgid "Contact persons"
 msgstr ""
 
 #: emergencycard/app.py:260 emergencycard/app.py:314
