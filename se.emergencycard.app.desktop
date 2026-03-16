@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Nodkort
+Name[en]=Emergency Card
+Comment=Digitalt nodkort for nodsituationer
+Comment[en]=Digital emergency card for emergencies
+Exec=emergency-card
+Icon=contact-new
+Terminal=false
+Type=Application
+Categories=Utility;Accessibility;
+Keywords=emergency;nod;kort;medicinsk;medical;
