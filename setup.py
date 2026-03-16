@@ -1,15 +1,18 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="emergency-card",
     version="1.0.0",
     description="Digitalt nodkort for nodsituationer - offline-forst",
     author="EmergencyCard",
-    py_modules=["emergency_card"],
+    packages=find_packages(),
+    package_data={
+        "": ["locale/*/LC_MESSAGES/*.mo"],
+    },
     install_requires=["PyGObject", "qrcode", "pillow"],
     entry_points={
         "console_scripts": [
-            "emergency-card=emergency_card:main",
+            "emergency-card=emergencycard.app:main",
         ],
     },
     data_files=[

@@ -10,6 +10,7 @@ import tempfile
 gi.require_version("Gtk", "4.0")
 gi.require_version("Adw", "1")
 from gi.repository import Gtk, Adw, GLib, Gdk, Pango, GdkPixbuf
+from emergencycard.i18n import _
 
 APP_ID = "se.emergencycard.app"
 DATA_DIR = os.path.join(GLib.get_user_data_dir(), "emergency-card")
@@ -100,7 +101,7 @@ class EmergencyCardApp(Adw.Application):
         self.data = load_data()
 
     def do_activate(self):
-        win = Adw.ApplicationWindow(application=self, title="Nodkort")
+        win = Adw.ApplicationWindow(application=self, title=_("Nodkort"))
         win.set_default_size(420, 700)
 
         # Main layout with view stack
@@ -181,11 +182,11 @@ class EmergencyCardApp(Adw.Application):
         box.set_margin_end(16)
 
         # Title
-        title = Gtk.Label(label="NODKORT", halign=Gtk.Align.CENTER)
+        title = Gtk.Label(label=_("NODKORT"), halign=Gtk.Align.CENTER)
         title.add_css_class("emergency-title")
         box.append(title)
 
-        subtitle = Gtk.Label(label="EMERGENCY CARD", halign=Gtk.Align.CENTER)
+        subtitle = Gtk.Label(label=_("EMERGENCY CARD"), halign=Gtk.Align.CENTER)
         subtitle.set_opacity(0.7)
         box.append(subtitle)
 
@@ -195,7 +196,7 @@ class EmergencyCardApp(Adw.Application):
 
         # Personal info fields
         fields = [
-            ("namn", "Namn"),
+            ("namn", _("Namn")),
             ("personnummer", "Personnummer"),
             ("diagnoser", "Diagnoser"),
             ("mediciner", "Mediciner"),
@@ -220,7 +221,7 @@ class EmergencyCardApp(Adw.Application):
         # Communication needs - highlighted
         if self.data.get("kommunikation"):
             comm_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=4)
-            comm_title = Gtk.Label(label="KOMMUNIKATIONSBEHOV", halign=Gtk.Align.START)
+            comm_title = Gtk.Label(label=_("KOMMUNIKATIONSBEHOV"), halign=Gtk.Align.START)
             comm_title.add_css_class("emergency-label")
             comm_box.append(comm_title)
             comm_val = Gtk.Label(
@@ -235,17 +236,17 @@ class EmergencyCardApp(Adw.Application):
             box.append(comm_box)
             box.append(Gtk.Separator())
         else:
-            lbl = Gtk.Label(label="Kommunikationsbehov", halign=Gtk.Align.START)
+            lbl = Gtk.Label(label=_(_("Kommunikationsbehov")), halign=Gtk.Align.START)
             lbl.add_css_class("emergency-label")
             box.append(lbl)
-            val = Gtk.Label(label="(ej ifyllt)", halign=Gtk.Align.START)
+            val = Gtk.Label(label=_("(ej ifyllt)"), halign=Gtk.Align.START)
             val.add_css_class("emergency-value")
             self.view_labels["kommunikation"] = val
             box.append(val)
             box.append(Gtk.Separator())
 
         # Contacts
-        contacts_title = Gtk.Label(label="Kontaktpersoner", halign=Gtk.Align.START)
+        contacts_title = Gtk.Label(label=_("Kontaktpersoner"), halign=Gtk.Align.START)
         contacts_title.add_css_class("emergency-section")
         box.append(contacts_title)
 
@@ -256,7 +257,7 @@ class EmergencyCardApp(Adw.Application):
         # Notes
         if self.data.get("anteckningar"):
             box.append(Gtk.Separator())
-            lbl = Gtk.Label(label="Anteckningar", halign=Gtk.Align.START)
+            lbl = Gtk.Label(label=_("Anteckningar"), halign=Gtk.Align.START)
             lbl.add_css_class("emergency-label")
             box.append(lbl)
             val = Gtk.Label(
@@ -304,13 +305,13 @@ class EmergencyCardApp(Adw.Application):
         self.entries = {}
 
         fields = [
-            ("namn", "Namn", "Ditt fullstandiga namn"),
+            ("namn", _("Namn"), "Ditt fullstandiga namn"),
             ("personnummer", "Personnummer", "YYYYMMDD-XXXX"),
             ("diagnoser", "Diagnoser", "T.ex. diabetes, epilepsi, autism"),
             ("mediciner", "Mediciner", "T.ex. Insulin 20E, Lamotrigin 200mg"),
             ("allergier", "Allergier", "T.ex. penicillin, notter"),
-            ("kommunikation", "Kommunikationsbehov", "T.ex. behover extra tid, icke-verbal"),
-            ("anteckningar", "Anteckningar", "Ovrig viktig information"),
+            ("kommunikation", _("Kommunikationsbehov"), "T.ex. behover extra tid, icke-verbal"),
+            ("anteckningar", _("Anteckningar"), "Ovrig viktig information"),
         ]
 
         for key, label_text, placeholder in fields:
@@ -329,7 +330,7 @@ class EmergencyCardApp(Adw.Application):
         # Contacts section
         box.append(Gtk.Separator())
         contacts_header = Gtk.Box(spacing=8)
-        contacts_title = Gtk.Label(label="Kontaktpersoner", halign=Gtk.Align.START, hexpand=True)
+        contacts_title = Gtk.Label(label=_("Kontaktpersoner"), halign=Gtk.Align.START, hexpand=True)
         contacts_title.add_css_class("emergency-section")
         contacts_header.append(contacts_title)
         add_btn = Gtk.Button(label="+ Lagg till")
@@ -368,7 +369,7 @@ class EmergencyCardApp(Adw.Application):
             inner.set_margin_end(8)
 
             row1 = Gtk.Box(spacing=8)
-            name_entry = Gtk.Entry(text=k.get("namn", ""), placeholder_text="Namn", hexpand=True)
+            name_entry = Gtk.Entry(text=k.get("namn", ""), placeholder_text=_("Namn"), hexpand=True)
             rel_entry = Gtk.Entry(text=k.get("relation", ""), placeholder_text="Relation")
             rel_entry.set_size_request(120, -1)
             row1.append(name_entry)
