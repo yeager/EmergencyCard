@@ -1,0 +1,39 @@
+# Swedish translation
+# Copyright (C) 2024
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "(ej ifyllt)"
+msgstr "(ej ifyllt)"
+
+msgid "Anteckningar"
+msgstr "Anteckningar"
+
+msgid "EMERGENCY CARD"
+msgstr "EMERGENCY CARD"
+
+msgid "KOMMUNIKATIONSBEHOV"
+msgstr "KOMMUNIKATIONSBEHOV"
+
+msgid "Kommunikationsbehov"
+msgstr "Kommunikationsbehov"
+
+msgid "Kontaktpersoner"
+msgstr "Kontaktpersoner"
+
+msgid "NODKORT"
+msgstr "NODKORT"
+
+msgid "Namn"
+msgstr "Name"
+
+msgid "Nodkort"
+msgstr "Nodkort"
+

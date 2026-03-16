@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the EmergencyCard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: EmergencyCard 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 11:32+0100\n"
+"POT-Creation-Date: 2026-03-16 11:51+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,16 +17,20 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: emergencycard/app.py:242
-msgid "(ej ifyllt)"
+#: emergencycard/app.py:104
+msgid "Nodkort"
 msgstr ""
 
-#: emergencycard/app.py:260 emergencycard/app.py:314
-msgid "Anteckningar"
+#: emergencycard/app.py:185
+msgid "NODKORT"
 msgstr ""
 
 #: emergencycard/app.py:189
 msgid "EMERGENCY CARD"
+msgstr ""
+
+#: emergencycard/app.py:199 emergencycard/app.py:308 emergencycard/app.py:372
+msgid "Name"
 msgstr ""
 
 #: emergencycard/app.py:224
@@ -37,20 +41,14 @@ msgstr ""
 msgid "Kommunikationsbehov"
 msgstr ""
 
-#. Contacts
+#: emergencycard/app.py:242
+msgid "(ej ifyllt)"
+msgstr ""
+
 #: emergencycard/app.py:249 emergencycard/app.py:333
 msgid "Kontaktpersoner"
 msgstr ""
 
-#. Title
-#: emergencycard/app.py:185
-msgid "NODKORT"
-msgstr ""
-
-#: emergencycard/app.py:199 emergencycard/app.py:308 emergencycard/app.py:372
-msgid "Namn"
-msgstr ""
-
-#: emergencycard/app.py:104
-msgid "Nodkort"
+#: emergencycard/app.py:260 emergencycard/app.py:314
+msgid "Anteckningar"
 msgstr ""

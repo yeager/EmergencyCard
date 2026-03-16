@@ -196,7 +196,7 @@ class EmergencyCardApp(Adw.Application):
 
         # Personal info fields
         fields = [
-            ("namn", _("Namn")),
+            ("namn", _("Name")),
             ("personnummer", "Personnummer"),
             ("diagnoser", "Diagnoser"),
             ("mediciner", "Mediciner"),
@@ -305,7 +305,7 @@ class EmergencyCardApp(Adw.Application):
         self.entries = {}
 
         fields = [
-            ("namn", _("Namn"), "Ditt fullstandiga namn"),
+            ("namn", _("Name"), "Ditt fullstandiga namn"),
             ("personnummer", "Personnummer", "YYYYMMDD-XXXX"),
             ("diagnoser", "Diagnoser", "T.ex. diabetes, epilepsi, autism"),
             ("mediciner", "Mediciner", "T.ex. Insulin 20E, Lamotrigin 200mg"),
@@ -369,7 +369,7 @@ class EmergencyCardApp(Adw.Application):
             inner.set_margin_end(8)
 
             row1 = Gtk.Box(spacing=8)
-            name_entry = Gtk.Entry(text=k.get("namn", ""), placeholder_text=_("Namn"), hexpand=True)
+            name_entry = Gtk.Entry(text=k.get("namn", ""), placeholder_text=_("Name"), hexpand=True)
             rel_entry = Gtk.Entry(text=k.get("relation", ""), placeholder_text="Relation")
             rel_entry.set_size_request(120, -1)
             row1.append(name_entry)
