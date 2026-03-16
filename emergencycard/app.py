@@ -257,7 +257,7 @@ class EmergencyCardApp(Adw.Application):
         # Notes
         if self.data.get("anteckningar"):
             box.append(Gtk.Separator())
-            lbl = Gtk.Label(label=_("Anteckningar"), halign=Gtk.Align.START)
+            lbl = Gtk.Label(label=_("Notes"), halign=Gtk.Align.START)
             lbl.add_css_class("emergency-label")
             box.append(lbl)
             val = Gtk.Label(
@@ -311,7 +311,7 @@ class EmergencyCardApp(Adw.Application):
             ("mediciner", "Mediciner", "T.ex. Insulin 20E, Lamotrigin 200mg"),
             ("allergier", "Allergier", "T.ex. penicillin, notter"),
             ("kommunikation", _("Kommunikationsbehov"), "T.ex. behover extra tid, icke-verbal"),
-            ("anteckningar", _("Anteckningar"), "Ovrig viktig information"),
+            ("anteckningar", _("Notes"), "Ovrig viktig information"),
         ]
 
         for key, label_text, placeholder in fields:

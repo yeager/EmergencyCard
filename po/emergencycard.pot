@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the EmergencyCard package.
+# This file is distributed under the same license as the emergencycard package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: EmergencyCard 1.0\n"
+"Project-Id-Version: emergencycard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-03-16 11:51+0100\n"
+"POT-Creation-Date: 2026-03-16 19:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,5 +50,5 @@ msgid "Kontaktpersoner"
 msgstr ""
 
 #: emergencycard/app.py:260 emergencycard/app.py:314
-msgid "Anteckningar"
+msgid "Notes"
 msgstr ""
